@@ -1,0 +1,120 @@
+<!-- Editable table -->
+
+<div class="row">
+  <div class = "col-md-2"><button class="btn-success" (click)="on_click()">Create Shedule</button>
+  </div>
+  <div class = "col-md-10"><div *ngIf="counter === true"class="card">
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Shift Schedule</h3>
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-1">
+          <a class="text-success" >
+            <!-- <mdb-icon fas icon="plus" size="2x"></mdb-icon> -->
+          </a>
+        </span>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Shift EST</th>
+            <th class="text-center">Monday</th>
+            <th class="text-center">Tuesday</th>
+            <th class="text-center">Wednesday</th>
+            <th class="text-center">Thrusday</th>
+            <th class="text-center">Friday</th>
+            <th class="text-center">Saturday</th>
+            <th class="text-center">Sunday</th>
+          </tr>
+          <tr>
+            <td>10:30 PM  - 7:30 AM</td>
+            <td *ngFor="let a of this.dynamicColumn; let z =index">
+            
+                
+                <mat-select  >
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let emp of employeess; let i = index " [value]="emp">{{emp}}</mat-option>
+                 
+                </mat-select>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>04:30 AM  - 1:30 PM</td>
+             <td *ngFor="let a of this.dynamicColumn;let z =index">
+            
+                
+                <mat-select >
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let emp of employeess; let i = index " [value]="emp">{{emp}}</mat-option>
+                </mat-select>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>8:00 AM  - 5:00 PM</td>
+            <td *ngFor="let a of this.dynamicColumn;let z =index">
+            
+               
+                <mat-select >
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let emp of employeess; let i = index " [value]="emp">{{emp}}</mat-option>
+                 
+                </mat-select>
+              </td> 
+          </tr>
+          <tr>
+            <td>2:30 PM  - 11:30 PM</td>
+            <td *ngFor="let a of this.dynamicColumn;let z =index">
+            
+               
+                <mat-select  >
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let emp of employeess; let i = index " [value]="emp">{{emp}}</mat-option>
+                 
+                </mat-select>
+              
+            </td> 
+          </tr>
+          <!-- <tr *ngFor="let person of personList; let id = index">
+            <td>
+              <span (keyup)="changeValue(id, 'Monday', $event)" (blur)="updateList(id, 'Monday', $event)" contenteditable="true">{{person.Monday}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'Tuesday', $event)" (blur)="updateList(id, 'Tuesday', $event)">{{person.Tuesday}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'Wednesday', $event)" (blur)="updateList(id, 'Wednesday', $event)">{{person.Wednesday}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'Thrusday', $event)" (blur)="updateList(id, 'Thrusday', $event)">{{person.Thrusday}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'Friday', $event)" (blur)="updateList(id, 'Friday', $event)">{{person.Friday}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'Saturday', $event)" (blur)="updateList(id, 'Saturday', $event)">{{person.Saturday}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'Sunday', $event)" (blur)="updateList(id, 'Sunday', $event)">{{person.Sunday}}</span>
+            </td>
+            <td>
+              <span class="table-up">
+                <a class="indigo-text">
+                  <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon>
+                </a>
+              </span>
+              <span class="table-down">
+                <a class="indigo-text">
+                  <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon>
+                </a>
+              </span>
+            </td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+    <div class = "col-md-2"><button class="btn btn-success" (click)="save_and_mail()">Send Email</button></div>
+    
+<button class = "btn btn-info" onclick="window.print()">Print Schedule</button>
+  </div>
+
+ 
+  <!-- Editable table -->

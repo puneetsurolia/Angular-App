@@ -1,0 +1,68 @@
+
+<div class="col-sm-12">
+    <p align="center"> <span class="login100-form-title p-b-70">
+        Welcome to Support Dash Board
+    </span></p>
+</div>
+
+<div class="col-sm-12 display-center-horizontal">
+    <form class="login100-form validate-form">
+               
+
+        <div class="col-md-6">
+
+            <div class="">
+                <mat-form-field class="col-sm-12">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="please enter user name" name="username"[(ngModel)]="person.userName">
+                 </mat-form-field>
+            </div>
+
+            <div class="">
+                <mat-form-field class="col-sm-12">
+                    <mat-label>Password</mat-label>
+                    <input type = "password" matInput placeholder="please enter user name" name="password"[(ngModel)]="person.password">
+                 </mat-form-field>
+            </div>
+
+            <div class="col-sm-12 login-button-div">
+                <button mat-raised-button class="login-button"  (click)="on_click()" color="primary">Login</button>
+            </div>
+        </div>
+
+            <!-- <ul class="login-more p-t-190">
+                <li class="m-b-8">
+                    <span class="txt1">
+                        Forgot
+                    </span>
+
+                    <a href="#" class="txt2">
+                        Username / Password?
+                    </a>
+                </li>
+
+                <li>
+                    <span class="txt1">
+                        Don’t have an account?
+                    </span>
+
+                    <a href="#" class="txt2">
+                        Sign up
+                    </a>
+                </li>
+            </ul> -->
+        </form>
+</div>
+
+
+<div class="limiter">
+    <div class="container-login100">
+        
+        <div class="wrap-login100 p-t-85 p-b-20">
+           
+        </div>
+    </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
