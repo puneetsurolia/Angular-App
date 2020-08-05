@@ -13,7 +13,9 @@ export class HttpLayerService {
   get(url){
   return this.http.get(url)
   }
-  post(url,body){
-
-  }
+  post(url,data){
+    const headers = { 'content-type': 'application/json'}  
+    const body=JSON.stringify(data);
+    console.log(body)
+    return this.http.post(url, body,{'headers':headers})  }
 }

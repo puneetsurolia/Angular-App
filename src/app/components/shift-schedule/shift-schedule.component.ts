@@ -8,23 +8,16 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./shift-schedule.component.scss']
 })
 export class ShiftScheduleComponent implements OnInit {
-  dynamicColumn =['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
-  abc="abhishek"
+  dropDownList = ["Abhishek","Deepam","DeepakR","Tiago","Puneet","Pratyush","Rupesh"];
+  shifts=["10:30 PM - 7:30 AM","04:30 AM - 1:30 PM","8:00 AM - 5:00 PM","2:30 PM - 11:30 PM"];
   postObject ={
-    "monday":["Abhishek","Deepam","DeepakR","Tiago"],
+    "monday":[],
     "tuesday":[],
     "wednesday":[],
     "thursday":[],
     "friday":[],
     "saturday" :[],
     "sunday" :[]
-  };
-  ekObject = {
-   
-    s1:["Abhishek","Deepam","DeepakR","Tiago"],
-    s2:["Abhishek","Deepam","DeepakR","Tiago"],
-    s3:["Abhishek","Deepam","DeepakR","Tiago"],
-    s4:["Abhishek","Deepam","DeepakR","Tiago"]
   };
   employeess:string[]=[];
   counter:boolean = false;
@@ -46,10 +39,16 @@ this.middle.fetchEmployee().subscribe((res:any[])=>{
  save_and_mail(){
  
   console.log("from save and mail")
-  
+  this.middle.createShedule(this.postObject).subscribe((res:any[])=>{
+    console.log(res)
+  })
  }
  approve_Leave(){
 
+ }
+
+ selectCar(e){
+console.log(this.postObject)
  }
 
 

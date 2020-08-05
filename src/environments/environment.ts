@@ -5,9 +5,10 @@
 export const environment = {
   production: false,
   url:{
-    baseUrl:"https://jsonplaceholder.typicode.com/",
+    baseUrl:"https://yk0ylgvcq2.execute-api.eu-west-2.amazonaws.com/dev/",
     urls:{
-         getUser:'users'
+         getUser:'users',
+         createShedule:"createschedule"
     }
   }
 };

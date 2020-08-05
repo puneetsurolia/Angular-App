@@ -23,4 +23,10 @@ export class MiddleLayerService {
     const url ='../../../../assets/employee.json';
     return this.htpp.get(url);
   }
+
+  createShedule(body){
+    let url =this.childUrl['createShedule'];
+    return this.htpp.post(this.baseUrl+url,body)
+
+  }
 }
