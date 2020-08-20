@@ -16,13 +16,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ShiftScheduleComponent } from './components/shift-schedule/shift-schedule.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashBoardComponent,
     SupportTeamComponent,
-    ShiftScheduleComponent
+    ShiftScheduleComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

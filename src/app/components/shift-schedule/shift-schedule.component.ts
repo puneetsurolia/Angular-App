@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MiddleLayerService} from '../../services/Http-layer/middle-layer/middle-layer.service';
 ///import {MatFormFieldControl} from '@angular/material';
+import { Router } from '@angular/router';
+
 import {FormControl} from '@angular/forms';
 @Component({
   selector: 'app-shift-schedule',
@@ -21,7 +23,8 @@ export class ShiftScheduleComponent implements OnInit {
   };
   employeess:string[]=[];
   counter:boolean = false;
-   constructor(private middle :MiddleLayerService) { }
+   constructor(private middle :MiddleLayerService,private router :Router) { }
+   
 
   ngOnInit(): void {
   }
@@ -36,9 +39,14 @@ this.middle.fetchEmployee().subscribe((res:any[])=>{
  on_click(){
    this.fetchPresentEmployee();
  }
+
+ addMember(){
+  
+   this.router.navigateByUrl('/addMember')
+}
  save_and_mail(){
  
-  console.log("from save and mail")
+  alert("data saved.")
   this.middle.createShedule(this.postObject).subscribe((res:any[])=>{
     console.log(res)
   })
