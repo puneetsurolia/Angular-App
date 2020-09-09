@@ -29,4 +29,9 @@ export class MiddleLayerService {
     return this.htpp.post(this.baseUrl+url,body)
 
   }
+
+  addmember(body){
+    let url =this.childUrl['addmember'];
+    return this.htpp.post("https://rxhzuowom8.execute-api.eu-west-2.amazonaws.com/dev"+url,body)
+  }
 }

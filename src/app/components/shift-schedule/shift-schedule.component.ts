@@ -10,8 +10,8 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./shift-schedule.component.scss']
 })
 export class ShiftScheduleComponent implements OnInit {
-  dropDownList = ["Abhishek","Deepam","DeepakR","Tiago","Puneet","Pratyush","Rupesh"];
-  shifts=["10:30 PM - 7:30 AM","04:30 AM - 1:30 PM","8:00 AM - 5:00 PM","2:30 PM - 11:30 PM"];
+  dropDownList = ["EST_1","EST_2","IST_1","IST_2"];
+  shifts=["Abhishek","Puneet","Pratyush","Deepam","Rupesh","DeepakR","Tiago"];
   postObject ={
     "monday":[],
     "tuesday":[],

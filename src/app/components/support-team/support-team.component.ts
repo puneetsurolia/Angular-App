@@ -16,7 +16,11 @@ export class SupportTeamComponent implements OnInit {
 
   on_click() {
    console.log(this.person)
+   if(this.person.userName == "admin"){
    this.route.navigateByUrl('/createschedule')
+  }else{
+    this.route.navigateByUrl('/leaveform')
+  }
   }
   ngOnInit(): void {
   }

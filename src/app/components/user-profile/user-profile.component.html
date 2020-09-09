@@ -4,18 +4,19 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Add Team Member</h2>
-                    <form method="POST">
+                    <form [formGroup]="profileForm">
+                  <!--  <form method="POST"> -->
                         <div class="row row-space">
                             <div class="col-12">
                                 <div class="input-group">
                                     <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input class="input--style-4" type="text" formControlName="firstName">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group">
                                     <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" formControlName="lastName">
                                 </div>
                             </div>
                         </div>
@@ -25,26 +26,26 @@
                             <div class="col-12">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" formControlName="email">
                                 </div>
                             </div>
                             
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone"><br>
+                                    <input class="input--style-4" type="text" formControlName="phone"><br>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="input-group">
                                     <label class="label">Time Zone</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" formControlName="timezone">
                                 </div>
                             </div>
                              <!--  -->
                         </div>
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                        <div class="col-sm-12 login-button-div">
+                            <button mat-raised-button class="login-button"  (click)="on_click()" color="primary">Submit</button>
                         </div>
                     </form>
                 </div>

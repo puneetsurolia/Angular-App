@@ -17,6 +17,11 @@ import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ShiftScheduleComponent } from './components/shift-schedule/shift-schedule.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { LeaveFormComponent } from './components/leave-form/leave-form.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,20 +29,23 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     DashBoardComponent,
     SupportTeamComponent,
     ShiftScheduleComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    LeaveFormComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     MatAutocompleteModule,
     HttpClientModule,
     MatTableModule,
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    
-    FormsModule
+    FormsModule,
+    MatDatepickerModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
