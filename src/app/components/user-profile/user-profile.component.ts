@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MiddleLayerService } from '../../services/Http-layer/middle-layer/middle-layer.service';
 
 
 
@@ -16,14 +17,14 @@ export class UserProfileComponent implements OnInit {
     phone: new FormControl(''),
     timezone: new FormControl('')
   });
-  constructor() { }
+  constructor(private middle: MiddleLayerService) {}
 
   ngOnInit(): void {
   }
   on_click() {
-    // TODO: Use EventEmitter with form value
-    console.log(this.profileForm.value);
-    
+    this.middle.addmember(this.profileForm.value).subscribe((res:any[])=>{
+console.log(res)
+    })
   }
 
 }

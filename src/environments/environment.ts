@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   url:{
     baseUrl:"https://yk0ylgvcq2.execute-api.eu-west-2.amazonaws.com/dev/",
+    baseUrl2:"https://rxhzuowom8.execute-api.eu-west-2.amazonaws.com/dev/",
     urls:{
          getUser:'users',
          createShedule:"createschedule",

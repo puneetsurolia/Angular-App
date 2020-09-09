@@ -8,6 +8,7 @@ import {HttpLayerService} from '../http-layer/http-layer.service'
 })
 export class MiddleLayerService {
  baseUrl:string =environment.url.baseUrl;
+  mainurl :any=environment.url;
  childUrl:any =environment.url.urls;
 
 
@@ -32,6 +33,6 @@ export class MiddleLayerService {
 
   addmember(body){
     let url =this.childUrl['addmember'];
-    return this.htpp.post("https://rxhzuowom8.execute-api.eu-west-2.amazonaws.com/dev"+url,body)
+    return this.htpp.post(this.mainurl.baseUrl2+url,body)
   }
 }
